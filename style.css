@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d1117;
+  font-family: 'Roboto Mono', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.reminder-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  animation: floatCard 2s infinite ease-in-out;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.reminder-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 1rem;
+}
+
+.reminder-header h1 {
+  flex: 1;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+.reminder-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.reminder-question h2 {
+  color: #e6edf3;
+  text-align: center;
+  margin: 1.5rem 0;
+  font-size: 1.4rem;
+}
+
+.reminder-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reminder-button {
+  background: #21262d;
+  color: #f1f1f1;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.reminder-button:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.primary { background: #3498db; }
+.primary:hover { background: #2980b9; }
+
+.success { background: #2ecc71; }
+.success:hover { background: #27ae60; }
+
+.warning { background: #f39c12; }
+.warning:hover { background: #e67e22; }
+
+.danger { background: #d81a1a; }
+.danger:hover { background: #e67e22; }
+
+.platform-icons {
+  margin-top: 2rem;
+}
+
+.platforms-label {
+  color: #8b949e;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.platform-icon {
+  width: 50px;
+  height: 50px;
+  background: #333;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.platform-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.platform-icon:hover {
+  transform: rotateY(15deg) scale(1.1);
+}
+
+.platform-name {
+  position: absolute;
+  bottom: -25px;
+  background: #21262d;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.platform-icon:hover .platform-name {
+  opacity: 1;
+}
+
+#message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #58a6ff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  color: #0d1117;
+  font-weight: 600;
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

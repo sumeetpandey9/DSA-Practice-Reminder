@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA Practice Reminder</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="reminder-card">
+    <div class="reminder-header">
+      <h1>Daily DSA Check</h1>
+    </div>
+    <div class="reminder-question">
+      <h2>Did you practice DSA today?</h2>
+    </div>
+    <div class="reminder-options">
+      <button class="reminder-button primary" id="yesButton">
+        <span class="button-label">✅ Yes, I did!</span>
+      </button>
+      <button class="reminder-button warning" id="snoozeButton">
+        <span class="button-label">🕒 Snooze</span>
+      </button>
+      <button class="reminder-button success" id="solvingButton">
+        <span class="button-label">🚀 I'm going solving now!</span>
+      </button>  
+      <!-- Add a "Don't show again today" button -->
+      <button class="reminder-button danger" id="dont-show-again-btn">
+       <span class="button-label">🚫 Don't show again today</span>
+      </button>        
+    </div>
+
+    <div class="platform-icons">
+      <div class="platforms-label">Platforms you love ❤️</div>
+      <div class="icons-container">
+        <a href="https://leetcode.com" target="_blank" class="platform-icon" style="background:#6c6c6b;">
+          <img src="images/leetcode.png" width="24" height="24" />
+          <span class="platform-name">LeetCode</span>
+        </a>
+        <a href="https://www.naukri.com/code360" target="_blank" class="platform-icon" style="background:#feae02;">
+          <img src="images/codingNinja.png" width="24" height="24" />
+          <span class="platform-name">CodingNinja</span>
+        </a>
+        <a href="https://www.geeksforgeeks.org" target="_blank" class="platform-icon" style="background:#00ff40;">
+          <img src="images/geeksforgeeks.png" width="24" height="24" />
+          <span class="platform-name">GFG</span>
+        </a>
+        <a href="https://codeforces.com" target="_blank" class="platform-icon" style="background:#e8f3f9;">
+          <img src="images/codeForces.png" width="24" height="24" />
+          <span class="platform-name">Codeforces</span>
+        </a>
+        <a href="https://www.codechef.com" target="_blank" class="platform-icon" style="background:#c09168;">
+          <img src="images/codechef.png" width="24" height="24" />
+          <span class="platform-name">CodeChef</span>
+        </a>
+        <a href="https://takeuforward.org/" target="_blank" class="platform-icon" style="background:#FF5C5C;">
+          <img src="images/TakeUforward.png" width="24" height="24" />
+          <span class="platform-name">TakeUForward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="message" class="fade-out"></div>
+</body>
+</html>
